@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Varney Records</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <script>
+        // Redirect after 5 seconds
+        setTimeout(function() {
+            window.location.href = "index.html";
+        }, 5000);
+
+        // Countdown timer
+        let countdown = 5;
+        function updateCountdown() {
+            document.getElementById("countdown").innerText = countdown;
+            countdown--;
+            if (countdown >= 0) {
+                setTimeout(updateCountdown, 1000);
+            }
+        }
+        window.onload = updateCountdown;
+    </script>
+</head>
+<body>
+
+    <header class="site-header sticky">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Varney Records">
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#artists">Artists</a></li>
+                    <li><a href="index.html#releases">Releases</a></li>
+                    <li><a href="index.html#news">News</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="thank-you-section section-padding">
+            <div class="container">
+                <h1>Thank You for Applying!</h1>
+                <p class="intro-text">We’ve received your application and will review it soon. If selected, we’ll reach out via email.</p>
+                <p class="additional-text">Redirecting to the homepage in <span id="countdown">5</span> seconds...</p>
+
+                <a href="index.html" class="btn btn-primary">Go to Home Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Varney Records</div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a> |
+                    <a href="#">Terms of Service</a> |
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+            <p class="copyright">© 2025 Varney Records. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
