@@ -12,7 +12,7 @@
     <header class="site-header sticky">
         <div class="container">
             <div class="logo">
-                <img src="logo.png" alt="Varney Records">
+                <h1>Varney Records</h1>
             </div>
             <nav class="main-nav">
                 <ul>
@@ -30,87 +30,34 @@
         <section class="application-section section-padding">
             <div class="container">
                 <h1>Apply Now</h1>
-                <p class="intro-text">Interested in joining Varney Records? Fill out the form below, and we’ll review your submission.</p>
+                <p class="intro-text">Interested in joining Varney Records? Fill out the form below.</p>
 
-                <form action="https://getform.io/f/axowkvzb" method="POST" enctype="multipart/form-data">
-                    <input type="hidden" name="subject" value="New Artist Application Submission">
-                    
-                    <div class="form-group">
-                        <label for="artist-name">Artist / Band Name:</label>
-                        <input type="text" id="artist-name" name="artist_name" required>
-                    </div>
+                <!-- Embedded Tally Form -->
+                <iframe data-tally-src="https://tally.so/embed/nWQL5P?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
+                        loading="lazy" width="100%" height="1287" frameborder="0" marginheight="0" marginwidth="0" title="Application"></iframe>
+                <script>
+                    var d=document,w="https://tally.so/widgets/embed.js",v=function(){
+                        "undefined"!=typeof Tally?Tally.loadEmbeds():
+                        d.querySelectorAll("iframe[data-tally-src]:not([src])")
+                        .forEach((function(e){e.src=e.dataset.tallySrc}));
+                    };
+                    if("undefined"!=typeof Tally)v();
+                    else if(d.querySelector('script[src="'+w+'"]')==null){
+                        var s=d.createElement("script");
+                        s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s);
+                    }
+                </script>
 
-                    <div class="form-group">
-                        <label for="contact-name">Contact Person Name:</label>
-                        <input type="text" id="contact-name" name="contact_name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="contact-email">Contact Email:</label>
-                        <input type="email" id="contact-email" name="contact_email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="location">Location (City, Country):</label>
-                        <input type="text" id="location" name="location">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="genre">Genre / Style of Music:</label>
-                        <input type="text" id="genre" name="genre" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="music-links">Link(s) to Your Music (If not uploading files):</label>
-                        <textarea id="music-links" name="music_links" rows="3" placeholder="e.g., Spotify, SoundCloud, Bandcamp, YouTube links."></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="audio-files">Upload Audio File(s) (Optional):</label>
-                        <input type="file" id="audio-files" name="audio_files[]" multiple accept=".mp3,.wav,.aac,.m4a,.ogg,.flac">
-                        <small>Accepted formats: MP3, WAV, AAC, M4A, OGG, FLAC.</small>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="bio">Short Bio / Description:</label>
-                        <textarea id="bio" name="bio" rows="5" placeholder="Tell us about yourself and your music."></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="social-links">Social Media Links (Optional):</label>
-                        <textarea id="social-links" name="social_links" rows="3" placeholder="e.g., Instagram, Facebook, TikTok links."></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="epk-link">Link to EPK (Electronic Press Kit) (Optional):</label>
-                        <input type="url" id="epk-link" name="epk_link" placeholder="https://...">
-                    </div>
-
-                    <div class="form-group checkbox-group">
-                        <input type="checkbox" id="rights-confirm" name="rights_confirm" value="confirmed" required>
-                        <label for="rights-confirm">I confirm that I own or control the rights to the music being submitted.</label>
-                    </div>
-
-                    <div class="form-group form-submit">
-                        <button type="submit" class="btn btn-primary">Submit Application</button>
-                    </div>
-
-                </form>
+                <!-- Manual Redirect Button -->
+                <div class="redirect-button">
+                    <a href="index.html" class="btn btn-primary">Back to Home</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">Varney Records</div>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a> |
-                    <a href="#">Terms of Service</a> |
-                    <a href="index.html#contact">Contact</a> |
-                    <a href="#">Demo Submissions</a>
-                </div>
-            </div>
             <p class="copyright">© 2025 Varney Records. All Rights Reserved.</p>
         </div>
     </footer>
