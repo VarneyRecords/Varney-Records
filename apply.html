@@ -30,12 +30,12 @@
         <section class="application-section section-padding">
             <div class="container">
                 <h1>Apply Now</h1>
-                <p class="intro-text">Interested in joining Varney Records? Fill out the form below. We'll review your submission and respond accordingly.</p>
+                <p class="intro-text">Interested in joining Varney Records? Fill out the form below, and we’ll review your submission.</p>
 
-                <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
-                    <input type="hidden" name="access_key" value="ab35ab6a-c6dd-4cf5-82cf-ae8f336d6153">
-                    <input type="hidden" name="subject" value="New Artist Application Submission">
-                    <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you"> <!-- Optional redirect -->
+                <form action="https://formsubmit.co/vrecs.applications@gmail.com" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="_subject" value="New Artist Application Submission">
+                    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you"> <!-- Optional redirect -->
+                    <input type="hidden" name="_captcha" value="false"> <!-- Disable CAPTCHA if needed -->
 
                     <div class="form-group">
                         <label for="artist-name">Artist / Band Name:</label>
@@ -70,7 +70,7 @@
                     <div class="form-group">
                         <label for="audio-files">Upload Audio File(s) (Optional):</label>
                         <input type="file" id="audio-files" name="audio_files[]" multiple accept=".mp3,.wav,.aac,.m4a,.ogg,.flac">
-                        <small>You can select multiple files. Accepted formats: MP3, WAV, AAC, M4A, OGG, FLAC.</small>
+                        <small>Accepted formats: MP3, WAV, AAC, M4A, OGG, FLAC.</small>
                     </div>
 
                     <div class="form-group">
