@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apply - Varney Records</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to the SAME stylesheet -->
-    <!-- Use the same fonts -->
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Reuse the same header for consistency -->
     <header class="site-header sticky">
         <div class="container">
             <div class="logo">
-                 <img src="images/logo.png" alt="Varney Records">
+                <img src="images/logo.png" alt="Varney Records">
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html#artists">Artists</a></li> <!-- Link back to sections on index.html -->
+                    <li><a href="index.html#artists">Artists</a></li>
                     <li><a href="index.html#releases">Releases</a></li>
                     <li><a href="index.html#news">News</a></li>
                     <li><a href="index.html#about">About</a></li>
@@ -32,11 +30,12 @@
         <section class="application-section section-padding">
             <div class="container">
                 <h1>Apply Now</h1>
-                <!-- **** UPDATED INSTRUCTION TEXT to mention upload option clearly **** -->
-                <p class="intro-text">Interested in joining Varney Records? Please fill out the form below. We'll do our best to respond to you. Please provide streaming links **OR** upload your best demo track(s) directly (MP3, WAV preferred).</p>
+                <p class="intro-text">Interested in joining Varney Records? Fill out the form below. We'll review your submission and respond accordingly.</p>
 
-                <!-- **** ADDED enctype attribute to the form tag **** -->
-                <form action="https://formsubmit.co/vrecs.applications@gmail.com" method="POST">
+                <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="access_key" value="e84b459d-bebd-46b1-9e89-3b429c67ec25">
+                    <input type="hidden" name="subject" value="New Artist Application Submission">
+                    <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you"> <!-- Optional redirect -->
 
                     <div class="form-group">
                         <label for="artist-name">Artist / Band Name:</label>
@@ -54,11 +53,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="contact-phone">Contact Phone (Optional):</label>
-                        <input type="tel" id="contact-phone" name="contact_phone">
-                    </div>
-
-                    <div class="form-group">
                         <label for="location">Location (City, Country):</label>
                         <input type="text" id="location" name="location">
                     </div>
@@ -69,28 +63,24 @@
                     </div>
 
                     <div class="form-group">
-                        <!-- **** MODIFIED Label and made textarea not required if file is uploaded **** -->
                         <label for="music-links">Link(s) to Your Music (If not uploading files):</label>
-                        <textarea id="music-links" name="music_links" rows="3" placeholder="e.g., Spotify, SoundCloud, Bandcamp, YouTube links. One per line."></textarea>
+                        <textarea id="music-links" name="music_links" rows="3" placeholder="e.g., Spotify, SoundCloud, Bandcamp, YouTube links."></textarea>
                     </div>
 
-                    <!-- **** ADDED FILE UPLOAD FIELD **** -->
                     <div class="form-group">
                         <label for="audio-files">Upload Audio File(s) (Optional):</label>
                         <input type="file" id="audio-files" name="audio_files[]" multiple accept=".mp3,.wav,.aac,.m4a,.ogg,.flac">
                         <small>You can select multiple files. Accepted formats: MP3, WAV, AAC, M4A, OGG, FLAC.</small>
                     </div>
-                    <!-- **** END ADDED FIELD **** -->
-
 
                     <div class="form-group">
                         <label for="bio">Short Bio / Description:</label>
                         <textarea id="bio" name="bio" rows="5" placeholder="Tell us about yourself and your music."></textarea>
                     </div>
 
-                     <div class="form-group">
+                    <div class="form-group">
                         <label for="social-links">Social Media Links (Optional):</label>
-                        <textarea id="social-links" name="social_links" rows="3" placeholder="e.g., Instagram, Facebook, TikTok links. One per line."></textarea>
+                        <textarea id="social-links" name="social_links" rows="3" placeholder="e.g., Instagram, Facebook, TikTok links."></textarea>
                     </div>
 
                     <div class="form-group">
@@ -112,24 +102,18 @@
         </section>
     </main>
 
-    <!-- Reuse the same footer for consistency -->
     <footer class="site-footer">
-         <div class="container">
+        <div class="container">
             <div class="footer-content">
-                 <div class="footer-logo">
-                    Varney Records
-                 </div>
-                 <div class="footer-links">
+                <div class="footer-logo">Varney Records</div>
+                <div class="footer-links">
                     <a href="#">Privacy Policy</a> |
                     <a href="#">Terms of Service</a> |
-                    <a href="index.html#contact">Contact</a> | <!-- Point specific links if needed -->
+                    <a href="index.html#contact">Contact</a> |
                     <a href="#">Demo Submissions</a>
-                 </div>
-                 <div class="footer-social">
-                    <!-- Repeat or alternative style social icons -->
-                 </div>
+                </div>
             </div>
-            <p class="copyright">© 2023 Varney Records. All Rights Reserved.</p>
+            <p class="copyright">© 2025 Varney Records. All Rights Reserved.</p>
         </div>
     </footer>
 
